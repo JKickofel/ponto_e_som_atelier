@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cerâmica Fria | Ponto e Som Atelier</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="icon" type="image/x-icon" href="../imagens/favicon.ico">
+
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <img src="../imagens/logo.png" alt="Ponto e Som Atelier" class="logo">
+
+        <h1>🎨 Cerâmica Fria</h1>
+
+        <p>
+            Peças artesanais exclusivas feitas à mão para decoração,
+            presentes e lembranças personalizadas.
+        </p>
+
+    </section>
+
+    <!-- BREADCRUMB -->
+
+    <section class="breadcrumb-container">
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">Início</a>
+
+            <span>›</span>
+
+            <span>Cerâmica Fria</span>
+
+        </div>
+
+    </section>
+
+    <!-- GALERIA -->
+
+    <section class="galeria-produto">
+
+        <h2>Galeria</h2>
+
+        <div class="grid-galeria">
+
+            <img src="../imagens/ceramica-fria.png" alt="Cerâmica Fria" class="lightbox-img">
+
+            <img src="../imagens/ceramica-fria.png" alt="Cerâmica Fria" class="lightbox-img">
+
+            <img src="../imagens/ceramica-fria.png" alt="Cerâmica Fria" class="lightbox-img">
+
+            <img src="../imagens/ceramica-fria.png" alt="Cerâmica Fria" class="lightbox-img">
+
+        </div>
+
+    </section>
+
+    <!-- PRODUTOS -->
+
+    <section class="produtos">
+
+        <h2>Modelos Disponíveis</h2>
+
+        <div class="grid-produtos">
+
+            <div class="card">
+
+                <img src="../imagens/ceramica-fria.png" alt="Paleta de Aquarela">
+
+                <div class="card-content">
+
+                    <h3>Paleta de Aquarela Artesanal</h3>
+
+                    <p>
+                        Produzida em cerâmica fria, ideal para artistas,
+                        aquarelistas e amantes de papelaria criativa.
+                    </p>
+
+                    <p class="prazo">
+                        ⏳ Produção sob encomenda
+                    </p>
+
+                    <p class="personalizacao">
+                        🎨 Formatos e cores personalizáveis
+                    </p>
+
+                    <span class="preco">
+                        Sob Consulta
+                    </span>
+
+                    <a class="btn-encomendar"
+                        href="https://wa.me/5553984621020?text=Olá! Tenho interesse na Paleta de Aquarela em Cerâmica Fria."
+                        target="_blank">
+
+                        💬 Encomendar este modelo
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="../imagens/ceramica-fria.png" alt="Peça Decorativa">
+
+                <div class="card-content">
+
+                    <h3>Peças Decorativas</h3>
+
+                    <p>
+                        Produções exclusivas para decoração,
+                        lembranças e presentes personalizados.
+                    </p>
+
+                    <p class="prazo">
+                        ⏳ Produção sob encomenda
+                    </p>
+
+                    <p class="personalizacao">
+                        🎨 Tema e cores personalizáveis
+                    </p>
+
+                    <span class="preco">
+                        Sob Consulta
+                    </span>
+
+                    <a class="btn-encomendar"
+                        href="https://wa.me/5553984621020?text=Olá! Tenho interesse em uma peça decorativa de Cerâmica Fria."
+                        target="_blank">
+
+                        💬 Encomendar este modelo
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE -->
+
+    <section class="sobre">
+
+        <h2>Feito à Mão com Carinho</h2>
+
+        <p>
+
+            Cada peça em cerâmica fria é modelada manualmente,
+            tornando cada criação única.
+
+            Trabalhamos com peças decorativas,
+            paletas para pintura, miniaturas,
+            lembranças e projetos personalizados.
+
+        </p>
+
+    </section>
+
+    <!-- VOLTAR -->
+
+    <section class="voltar-container">
+
+        <a href="../index.html" class="btn-voltar">
+
+            ← Voltar para a Loja
+
+        </a>
+
+    </section>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>💖 Cerâmica Fria Artesanal</p>
+
+        <p>📦 Envio para todo o Brasil</p>
+
+        <p>📱 Atendimento via WhatsApp</p>
+
+    </footer>
+
+    <!-- WHATSAPP FIXO -->
+
+    <a class="whatsapp-fixo" href="https://wa.me/5553984621020" target="_blank">
+
+        💬
+
+    </a>
+
+    <!-- LIGHTBOX -->
+
+    <div id="lightbox">
+
+        <span id="fechar-lightbox">&times;</span>
+
+        <span id="anterior">&#10094;</span>
+
+        <img id="imagem-lightbox" src="" alt="Imagem ampliada">
+
+        <span id="proximo">&#10095;</span>
+
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const imagens =
+                document.querySelectorAll(".lightbox-img");
+
+            const lightbox =
+                document.getElementById("lightbox");
+
+            const imagemLightbox =
+                document.getElementById("imagem-lightbox");
+
+            const fechar =
+                document.getElementById("fechar-lightbox");
+
+            const anterior =
+                document.getElementById("anterior");
+
+            const proximo =
+                document.getElementById("proximo");
+
+            let indiceAtual = 0;
+
+            function abrirImagem(indice) {
+
+                indiceAtual = indice;
+
+                imagemLightbox.src =
+                    imagens[indiceAtual].src;
+
+                lightbox.style.display = "flex";
+            }
+
+            imagens.forEach((img, indice) => {
+
+                img.addEventListener("click", () => {
+
+                    abrirImagem(indice);
+
+                });
+
+            });
+
+            proximo.addEventListener("click", () => {
+
+                indiceAtual++;
+
+                if (indiceAtual >= imagens.length) {
+
+                    indiceAtual = 0;
+
+                }
+
+                abrirImagem(indiceAtual);
+
+            });
+
+            anterior.addEventListener("click", () => {
+
+                indiceAtual--;
+
+                if (indiceAtual < 0) {
+
+                    indiceAtual =
+                        imagens.length - 1;
+
+                }
+
+                abrirImagem(indiceAtual);
+
+            });
+
+            fechar.addEventListener("click", () => {
+
+                lightbox.style.display = "none";
+
+            });
+
+            lightbox.addEventListener("click", (e) => {
+
+                if (e.target === lightbox) {
+
+                    lightbox.style.display = "none";
+
+                }
+
+            });
+
+            document.addEventListener("keydown", (e) => {
+
+                if (lightbox.style.display !== "flex") return;
+
+                if (e.key === "ArrowRight") {
+
+                    proximo.click();
+
+                }
+
+                if (e.key === "ArrowLeft") {
+
+                    anterior.click();
+
+                }
+
+                if (e.key === "Escape") {
+
+                    lightbox.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

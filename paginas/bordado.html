@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordados | Ponto e Som Atelier</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="icon" type="image/x-icon" href="../imagens/favicon.ico">
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <img src="../imagens/logo.png" alt="Ponto e Som Ateliê" class="logo">
+
+        <h1>🧵 Bordados Personalizados</h1>
+
+        <p>
+            Bordados feitos à mão com carinho, personalizados para cada pessoa. 💖
+        </p>
+
+    </section>
+
+    <section class="breadcrumb-container">
+
+        <div class="breadcrumb">
+            <a href="../index.html">Início</a>
+            <span>›</span>
+            <span>Bordados</span>
+        </div>
+
+    </section>
+
+    <section class="galeria-produto">
+
+        <h2>Galeria</h2>
+
+        <div class="grid-galeria">
+
+            <img src="../imagens/bordado1.png" alt="Bordado 1" class="lightbox-img">
+            <img src="../imagens/bordado2.jpg" alt="Bordado 2" class="lightbox-img">
+            <img src="../imagens/bordado3.jpg" alt="Bordado 3" class="lightbox-img">
+            <img src="../imagens/bordado4.jpg" alt="Bordado 4" class="lightbox-img">
+            <img src="../imagens/bordado5.jpg" alt="Bordado 5" class="lightbox-img">
+            <img src="../imagens/bordado6.jpg" alt="Bordado 6" class="lightbox-img">
+
+        </div>
+
+    </section>
+
+    <section class="produtos">
+
+        <h2>Modelos Disponíveis</h2>
+
+        <div class="grid-produtos">
+
+            <div class="card">
+
+                <img src="../imagens/bordado-com-nome.jpg" alt="Bordado com Nome">
+
+                <div class="card-content">
+
+                    <h3>Bordado Personalizado com Nome</h3>
+
+                    <p>
+                        Ideal para maternidade, decoração infantil e presentes especiais.
+                    </p>
+
+                    <p class="prazo">
+                        ⏳ Produção sob encomenda
+                    </p>
+
+                    <p class="personalizacao">
+                        🎨 Cores e nome personalizáveis
+                    </p>
+
+                    <span class="preco">
+                        Sob Consulta
+                    </span>
+
+                    <a class="btn-encomendar"
+                        href="https://wa.me/5553984621020?text=Olá! Tenho interesse em um Bordado Personalizado com Nome."
+                        target="_blank">
+
+                        💬 Encomendar este modelo
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="../imagens/bordado-em-bastidor.jpg" alt="Bordado em Bastidor">
+
+                <div class="card-content">
+
+                    <h3>Bordado em Bastidor Decorativo</h3>
+
+                    <p>
+                        Peças exclusivas para decorar quartos, salas e ambientes especiais.
+                    </p>
+
+                    <p class="prazo">
+                        ⏳ Produção sob encomenda
+                    </p>
+
+                    <p class="personalizacao">
+                        🎨 Desenhos e frases personalizáveis
+                    </p>
+
+                    <span class="preco">
+                        Sob Consulta
+                    </span>
+
+                    <a class="btn-encomendar"
+                        href="https://wa.me/5553984621020?text=Olá! Tenho interesse em um Bordado em Bastidor Decorativo."
+                        target="_blank">
+
+                        💬 Encomendar este modelo
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="sobre">
+
+        <h2>Arte em Cada Ponto</h2>
+
+        <p>
+
+            Cada bordado é produzido manualmente, respeitando os detalhes e a personalidade de cada encomenda.
+
+            Trabalhamos com nomes, frases, datas especiais, maternidade, decoração infantil e presentes personalizados.
+
+        </p>
+
+    </section>
+
+    <section class="voltar-container">
+
+        <a href="../index.html" class="btn-voltar">
+            ← Voltar para a Loja
+        </a>
+
+    </section>
+
+    <footer>
+
+        <p>💖 Bordados feitos à mão</p>
+
+        <p>📦 Envio para todo o Brasil</p>
+
+        <p>📱 Atendimento via WhatsApp</p>
+
+    </footer>
+
+    <a class="whatsapp-fixo" href="https://wa.me/5553984621020" target="_blank">
+
+        💬
+
+    </a>
+
+    <div id="lightbox">
+
+        <span id="fechar-lightbox">&times;</span>
+
+        <span id="anterior">&#10094;</span>
+
+        <img id="imagem-lightbox" src="" alt="Imagem ampliada">
+
+        <span id="proximo">&#10095;</span>
+
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const imagens =
+                document.querySelectorAll(".lightbox-img");
+
+            const lightbox =
+                document.getElementById("lightbox");
+
+            const imagemLightbox =
+                document.getElementById("imagem-lightbox");
+
+            const fechar =
+                document.getElementById("fechar-lightbox");
+
+            const anterior =
+                document.getElementById("anterior");
+
+            const proximo =
+                document.getElementById("proximo");
+
+            let indiceAtual = 0;
+
+            function abrirImagem(indice) {
+
+                indiceAtual = indice;
+
+                imagemLightbox.src =
+                    imagens[indiceAtual].src;
+
+                lightbox.style.display = "flex";
+            }
+
+            imagens.forEach((img, indice) => {
+
+                img.addEventListener("click", () => {
+
+                    abrirImagem(indice);
+
+                });
+
+            });
+
+            proximo.addEventListener("click", () => {
+
+                indiceAtual++;
+
+                if (indiceAtual >= imagens.length) {
+
+                    indiceAtual = 0;
+
+                }
+
+                abrirImagem(indiceAtual);
+
+            });
+
+            anterior.addEventListener("click", () => {
+
+                indiceAtual--;
+
+                if (indiceAtual < 0) {
+
+                    indiceAtual =
+                        imagens.length - 1;
+
+                }
+
+                abrirImagem(indiceAtual);
+
+            });
+
+            fechar.addEventListener("click", () => {
+
+                lightbox.style.display = "none";
+
+            });
+
+            lightbox.addEventListener("click", (e) => {
+
+                if (e.target === lightbox) {
+
+                    lightbox.style.display = "none";
+
+                }
+
+            });
+
+            document.addEventListener("keydown", (e) => {
+
+                if (lightbox.style.display !== "flex") return;
+
+                if (e.key === "ArrowRight") {
+
+                    proximo.click();
+
+                }
+
+                if (e.key === "ArrowLeft") {
+
+                    anterior.click();
+
+                }
+
+                if (e.key === "Escape") {
+
+                    lightbox.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

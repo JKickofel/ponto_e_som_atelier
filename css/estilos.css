@@ -1,10 +1,12 @@
 :root {
-  --mint: #BEE9E8;
-  --mint-escuro: #89D3D1;
-  --creme: #FFFDF8;
+  --mint: #CFF7E8;
+  --mint-escuro: #7FD1AE;
+
   --lavanda: #E7D9F7;
-  --pessego: #FFDCC8;
-  --texto: #5D6D67;
+  --pessego: #FFE2D1;
+  --creme: #FFFDF8;
+
+  --texto: #8D6E63;
   --whatsapp: #25D366;
 }
 
@@ -64,44 +66,44 @@ body {
 
 .botao-principal:hover {
   transform: translateY(-2px);
-  background:var(--pessego);
-    color:var(--texto);
+  background: var(--pessego);
+  color: var(--texto);
 }
 
-.carrossel{
-    width:100%;
-    padding:20px 0;
+.carrossel {
+  width: 100%;
+  padding: 20px 0;
 }
 
-.meuSwiper{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    border-radius:20px;
-    overflow:hidden;
+.meuSwiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.swiper-slide{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#FFFDF8;
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFDF8;
 }
 
-.swiper-slide img{
-    width:100%;
-    max-height:500px;
-    object-fit:contain;
-    display:block;
+.swiper-slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
 }
 
 .swiper-button-next,
-.swiper-button-prev{
-    color:var(--mint-escuro);
+.swiper-button-prev {
+  color: var(--mint-escuro);
 }
 
-.swiper-pagination-bullet-active{
-    background:var(--mint-escuro);
+.swiper-pagination-bullet-active {
+  background: var(--mint-escuro);
 }
 
 .categoria {
@@ -136,6 +138,19 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
 }
 
+.categoria-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.categoria-link:hover .categoria {
+  transform: translateY(-5px);
+}
+
+.categoria {
+  transition: .3s;
+}
+
 .produtos {
   max-width: 1200px;
   margin: auto;
@@ -159,6 +174,12 @@ body {
 
 .card:hover {
   transform: translateY(-6px);
+}
+
+.prazo,
+.personalizacao {
+  margin: 8px 0;
+  font-size: .95rem;
 }
 
 .card img {
@@ -190,7 +211,7 @@ body {
   display: block;
   text-decoration: none;
   text-align: center;
-  background: var(--whatsapp);
+  background: var(--mint-escuro);
   color: white;
   padding: 12px;
   border-radius: 12px;
@@ -239,5 +260,212 @@ footer {
   .hero h1 {
     font-size: 2.2rem;
   }
+}
 
+/* ==========================
+   BREADCRUMB
+  ========================== */
+
+.breadcrumb-container {
+  max-width: 1200px;
+  margin: 25px auto 10px;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: .95rem;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--mint-escuro);
+  font-weight: 600;
+}
+
+/* ==========================
+   BOTÃO VOLTAR
+  ========================== */
+
+.voltar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px 20px;
+}
+
+.btn-voltar {
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: var(--texto);
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+}
+
+/* ==========================
+   GALERIA
+  ========================== */
+
+.galeria-produto {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.galeria-produto h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid-galeria img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================
+   LIGHTBOX
+  ========================== */
+
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, .9);
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+#imagem-lightbox {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 15px;
+  transition: .3s;
+}
+
+.lightbox-img:hover {
+  opacity: .9;
+}
+
+#fechar-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  font-size: 40px;
+  color: white;
+
+  cursor: pointer;
+}
+
+.lightbox-img {
+  cursor: pointer;
+}
+
+.btn-encomendar {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  background: var(--mint-escuro);
+  color: rgb(41, 71, 54);
+
+  padding: 14px;
+  margin-top: 15px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: .3s;
+}
+
+.btn-encomendar:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* ==========================
+   SWIPER - CORES PERSONALIZADAS
+========================== */
+
+:root {
+  --swiper-theme-color: var(--mint-escuro);
+}
+
+/* Setas */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--mint-escuro) !important;
+}
+
+/* Bolinhas */
+
+.swiper-pagination-bullet {
+  background: var(--mint);
+  opacity: .6;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--mint-escuro) !important;
+  opacity: 1;
+}
+
+/* ==========================
+   SETAS LIGHTBOX
+========================== */
+
+#anterior,
+#proximo {
+
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: white;
+
+  font-size: 50px;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  padding: 15px;
+
+  transition: .3s;
+}
+
+#anterior:hover,
+#proximo:hover {
+
+  color: var(--mint);
+}
+
+#anterior {
+  left: 20px;
+}
+
+#proximo {
+  right: 20px;
 }

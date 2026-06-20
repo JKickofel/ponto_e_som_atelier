@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../imagens/favicon.ico">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
@@ -67,25 +67,36 @@
 
         <div class="grid-categorias">
 
-            <div class="categoria">
-                🧸<br><strong>Amigurumi</strong>
-            </div>
+            <a href="paginas/amigurumi.html" class="categoria-link">
+                <div class="categoria">
+                    🧸<br>
+                    <strong>Amigurumi</strong>
+                </div>
+            </a>
 
-            <div class="categoria">
-                🧶<br><strong>Crochê Kids</strong>
-            </div>
+            <a href="paginas/croche.html" class="categoria-link">
+                <div class="categoria">
+                    🧶<br><strong>Crochê Kids</strong>
+                </div>
+            </a>
 
-            <div class="categoria">
-                🧵<br><strong>Bordado</strong>
-            </div>
+            <a href="paginas/bordado.html" class="categoria-link">
+                <div class="categoria">
+                    🧵<br><strong>Bordado</strong>
+                </div>
+            </a>
 
-            <div class="categoria">
-                🎀<br><strong>Papelaria Fofa</strong>
-            </div>
+            <a href="paginas/papelaria.html" class="categoria-link">
+                <div class="categoria">
+                    🎀<br><strong>Papelaria Fofa</strong>
+                </div>
+            </a>
 
-            <div class="categoria">
-                🎨​<br><strong>Cerâmica Fria</strong>
-            </div>
+            <a href="paginas/ceramica.html" class="categoria-link">
+                <div class="categoria">
+                    🎨​<br><strong>Cerâmica Fria</strong>
+                </div>
+            </a>
 
         </div>
 
@@ -99,7 +110,7 @@
 
             <div class="card">
 
-                <img src="imagens/amigurumi.jpg" alt="Amigurumi">
+                <img src="imagens/amigurumi-personalizado.jpg" alt="Amigurumi">
 
                 <div class="card-content">
 
@@ -109,7 +120,7 @@
                         Produzido artesanalmente com muito carinho.
                     </p>
 
-                    <span class="preco">Sob Consulta</span>
+                    <span class="preco">Saiba mais</span>
 
                     <a class="btn-whats" href="https://wa.me/5553984621020?text=Olá! Tenho interesse em um amigurumi."
                         target="_blank">
@@ -121,7 +132,7 @@
 
             <div class="card">
 
-                <img src="imagens/croche.jpg" alt="Crochê Kids">
+                <img src="imagens/croche-kids.jpg" alt="Crochê Kids">
 
                 <div class="card-content">
 
@@ -131,7 +142,7 @@
                         Peças delicadas para os pequenos.
                     </p>
 
-                    <span class="preco">Sob Consulta</span>
+                    <span class="preco">Saiba mais</span>
 
                     <a class="btn-whats"
                         href="https://wa.me/5553984621020?text=Olá! Tenho interesse em peças de crochê kids."
@@ -154,7 +165,7 @@
                         Itens personalizados para presentear.
                     </p>
 
-                    <span class="preco">Sob Consulta</span>
+                    <span class="preco">Saiba mais</span>
 
                     <a class="btn-whats"
                         href="https://wa.me/5553984621020?text=Olá! Tenho interesse em itens de papelaria."
@@ -216,6 +227,48 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+
+        });
+
+    </script>
+
+    <script>
+
+        const imagens = document.querySelectorAll(".lightbox-img");
+
+        const lightbox = document.getElementById("lightbox");
+
+        const imagemLightbox =
+            document.getElementById("imagem-lightbox");
+
+        const fechar =
+            document.getElementById("fechar-lightbox");
+
+        imagens.forEach((img) => {
+
+            img.addEventListener("click", () => {
+
+                imagemLightbox.src = img.src;
+
+                lightbox.style.display = "flex";
+
+            });
+
+        });
+
+        fechar.addEventListener("click", () => {
+
+            lightbox.style.display = "none";
+
+        });
+
+        lightbox.addEventListener("click", (e) => {
+
+            if (e.target === lightbox) {
+
+                lightbox.style.display = "none";
+
+            }
 
         });
 
