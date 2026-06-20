@@ -9,10 +9,10 @@
 
     <title>Ponto e Som Atelier</title>
 
-   <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/x-icon" href="../imagens/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
@@ -24,51 +24,63 @@
 
 <body>
 
+    <header class="topbar">
+
+        <div>💖 Feito com amor</div>
+
+        <div>📦 Enviamos para todo Brasil</div>
+
+        <div>💬 Atendimento via WhatsApp</div>
+
+    </header>
+
+    <nav class="navbar">
+
+        <img src="imagens/logo.png" alt="Ponto e Som Atelier" class="logo-nav">
+
+        <ul>
+
+            <li><a href="#">Início</a></li>
+
+            <li><a href="#categorias">Produtos</a></li>
+
+            <li><a href="#contato">Contato</a></li>
+
+        </ul>
+
+    </nav>
+
     <section class="hero">
-        <img src="imagens/logo.png" alt="Logo Ponto e Som Atelier" class="logo">
 
-        <h1>Ponto e Som Atelier</h1>
+        <div class="decoracao decoracao-1"></div>
+        <div class="decoracao decoracao-2"></div>
 
-        <p>
-            Amigurumi • Crochê Kids • Bordado • Papelaria Fofa • Cerâmica Fria
-        </p>
-
-        <a class="botao-principal" href="https://wa.me/5553984621020" target="_blank">
-            💬 Fazer Encomenda
-        </a>
-    </section>
-
-    <section class="carrossel">
-
-        <div class="swiper meuSwiper">
-
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <img src="imagens/amigurumi1.png" alt="Amigurumi">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="imagens/ceramica-fria.png" alt="Cerâmica Fria">
-                </div>
-
-            </div>
-
-            <div class="swiper-pagination"></div>
-
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-
+        <div class="hero-texto">
+            <span class="boas-vindas">
+                💜 Bem vinda à
+            </span>
+            <h1>
+                Ponto e Som
+                <br>
+                Atelier
+            </h1>
+            <p>
+                Amigurumi, Crochê, Bordado,
+                Papelaria Criativa e Cerâmica Fria
+                feitos à mão com carinho.
+            </p>
+            <a href="https://wa.me/5553984621020" class="botao-principal" target="_blank">
+                Ver Produtos ♡
+            </a>
         </div>
 
+        <div class="hero-imagem">
+            <img src="imagens/amigurumi/amigurumi1.png" alt="Produto destaque">
+        </div>
     </section>
-
+    
     <section class="categorias">
-
-        <h2>Produtos</h2>
-
         <div class="grid-categorias">
-
             <a href="paginas/amigurumi.html" class="categoria-link">
                 <div class="categoria">
                     🧸<br>
@@ -99,14 +111,69 @@
                     🎨​<br><strong>Cerâmica Fria</strong>
                 </div>
             </a>
+        </div>
+    </section>
 
+    <section class="carrossel">
+
+        <div class="swiper meuSwiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="imagens/amigurumi/amigurumi1.png" alt="Amigurumi">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="imagens/ceramica/ceramica-fria.png" alt="Cerâmica Fria">
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+    <section class="beneficios">
+
+        <div class="beneficio">
+            <span>💖</span>
+            <h3>Feito à Mão</h3>
+            <p>Peças produzidas artesanalmente com carinho.</p>
+        </div>
+
+        <div class="beneficio">
+            <span>🎨</span>
+            <h3>Personalização</h3>
+            <p>Cores, nomes e detalhes sob encomenda.</p>
+        </div>
+
+        <div class="beneficio">
+            <span>📦</span>
+            <h3>Envio para Todo Brasil</h3>
+            <p>Entrega segura para qualquer região.</p>
+        </div>
+
+        <div class="beneficio">
+            <span>💬</span>
+            <h3>Atendimento Rápido</h3>
+            <p>Orçamentos diretamente pelo WhatsApp.</p>
         </div>
 
     </section>
 
     <section class="produtos">
 
-        <h2>Destaques</h2>
+        <section class="destaques">
+
+            <h2>✨ Produtos em Destaque</h2>
+
+        </section>
 
         <div class="grid-produtos">
 
@@ -191,6 +258,38 @@
             criatividade e muito carinho. Trabalho com encomendas
             personalizadas para tornar momentos especiais ainda mais únicos.
         </p>
+
+    </section>
+
+    <section class="como-encomendar">
+
+        <h2>Como Fazer Sua Encomenda</h2>
+
+        <div class="passos">
+
+            <div>1️⃣ Escolha seu produto</div>
+            <div>2️⃣ Fale pelo WhatsApp</div>
+            <div>3️⃣ Receba seu orçamento</div>
+            <div>4️⃣ Produção artesanal</div>
+            <div>5️⃣ Envio para sua casa ou retire no Atelier</div>
+
+        </div>
+
+    </section>
+
+    <section class="instagram">
+
+        <h2>📷 Acompanhe no Instagram</h2>
+
+        <p>
+            Veja novidades, bastidores e lançamentos.
+        </p>
+
+        <a href="https://www.instagram.com/pontoesomatelier/" target="_blank" class="botao-principal">
+
+            Seguir no Instagram
+
+        </a>
 
     </section>
 
