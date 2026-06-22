@@ -14,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -36,17 +40,41 @@
 
     <nav class="navbar">
 
-        <img src="imagens/logo.png" alt="Ponto e Som Atelier" class="logo-nav">
+        <!-- ESQUERDA -->
+        <div class="nav-left">
+            <img src="imagens/logo-bastidor.png" alt="Ponto e Som Atelier" class="logo-nav">
 
-        <ul>
+            <div class="marca-texto">
+                <span class="marca-nome">Ponto e Som</span>
+                <span class="marca-atelier">Atelier</span>
+            </div>
+        </div>
 
+        <!-- CENTRO -->
+        <ul class="nav-center">
             <li><a href="#">Início</a></li>
-
             <li><a href="#categorias">Produtos</a></li>
-
             <li><a href="#contato">Contato</a></li>
-
         </ul>
+
+        <!-- DIREITA -->
+        <div class="nav-right">
+
+            <div class="search-box">
+
+                <button class="search-btn" type="button">
+                    <img src="imagens/icones/lupa.png" alt="Buscar">
+                </button>
+
+                <input type="text" placeholder="Buscar produtos..." class="search-input">
+
+            </div>
+
+            <a href="#" class="icon carrinho" onclick="abrirCarrinho()">
+                <img src="imagens/icones/sacola.png" alt="Carrinho">
+            </a>
+
+        </div>
 
     </nav>
 
@@ -59,10 +87,9 @@
             <span class="boas-vindas">
                 💜 Bem vinda à
             </span>
-            <h1>
+            <h1 class="titulo-marca">
                 Ponto e Som
-                <br>
-                Atelier
+                <span>Atelier</span>
             </h1>
             <p>
                 Amigurumi, Crochê, Bordado,
@@ -78,37 +105,47 @@
             <img src="imagens/amigurumi/amigurumi1.png" alt="Produto destaque">
         </div>
     </section>
-    
+
     <section class="categorias">
         <div class="grid-categorias">
+
             <a href="paginas/amigurumi.html" class="categoria-link">
                 <div class="categoria">
-                    🧸<br>
-                    <strong>Amigurumi</strong>
+                    <img src="imagens/icones/amigurumi.png" alt="Amigurumi">
+                    <h3>Amigurumi</h3>
+                    <span>Ver opções</span>
                 </div>
             </a>
 
             <a href="paginas/croche.html" class="categoria-link">
                 <div class="categoria">
-                    🧶<br><strong>Crochê Kids</strong>
+                    <img src="imagens/icones/croche.png" alt="Crochê">
+                    <h3>Crochê</h3>
+                    <span>Ver opções</span>
                 </div>
             </a>
 
             <a href="paginas/bordado.html" class="categoria-link">
                 <div class="categoria">
-                    🧵<br><strong>Bordado</strong>
+                    <img src="imagens/icones/bordado.png" alt="Bordado">
+                    <h3>Bordado</h3>
+                    <span>Ver opções</span>
                 </div>
             </a>
 
             <a href="paginas/papelaria.html" class="categoria-link">
                 <div class="categoria">
-                    🎀<br><strong>Papelaria Fofa</strong>
+                    <img src="imagens/icones/papelaria.png" alt="Papelaria">
+                    <h3>Papelaria</h3>
+                    <span>Ver opções</span>
                 </div>
             </a>
 
             <a href="paginas/ceramica.html" class="categoria-link">
                 <div class="categoria">
-                    🎨​<br><strong>Cerâmica Fria</strong>
+                    <img src="imagens/icones/ceramica.png" alt="Cerâmica Fria">
+                    <h3>Cerâmica Fria</h3>
+                    <span>Ver opções</span>
                 </div>
             </a>
         </div>
@@ -171,15 +208,16 @@
 
         <section class="destaques">
 
-            <h2>✨ Produtos em Destaque</h2>
+            <h2>Personalizados mais procurados</h2>
 
         </section>
 
         <div class="grid-produtos">
 
             <div class="card">
-
-                <img src="imagens/amigurumi-personalizado.jpg" alt="Amigurumi">
+                <div class="card-imagem">
+                    <img src="imagens/amigurumi/amigurumi-personalizado.jpg" alt="Amigurumi">
+                </div>
 
                 <div class="card-content">
 
@@ -200,21 +238,22 @@
             </div>
 
             <div class="card">
-
-                <img src="imagens/croche-kids.jpg" alt="Crochê Kids">
+                <div class="card-imagem">
+                    <img src="imagens/bordado/bordado-em-bastidor.jpg" alt="Bordado em Bastidor">
+                </div>
 
                 <div class="card-content">
 
-                    <h3>Crochê Kids</h3>
+                    <h3>Bordado em Bastidor</h3>
 
                     <p>
-                        Peças delicadas para os pequenos.
+                        Bordados que contam a sua história.
                     </p>
 
                     <span class="preco">Saiba mais</span>
 
                     <a class="btn-whats"
-                        href="https://wa.me/5553984621020?text=Olá! Tenho interesse em peças de crochê kids."
+                        href="https://wa.me/5553984621020?text=Olá! Tenho interesse em peças de bordado."
                         target="_blank">
                         Encomendar
                     </a>
@@ -223,15 +262,16 @@
             </div>
 
             <div class="card">
-
-                <img src="imagens/papelaria.jpg" alt="Papelaria">
+                <div class="card-imagem">
+                    <img src="imagens/papelaria/papelaria.jpg" alt="Papelaria">
+                </div>
 
                 <div class="card-content">
 
-                    <h3>Papelaria Fofa</h3>
+                    <h3>Papelaria</h3>
 
                     <p>
-                        Itens personalizados para presentear.
+                        Itens personalizados para presentear ou com sua marca.
                     </p>
 
                     <span class="preco">Saiba mais</span>
@@ -306,74 +346,25 @@
     <a class="whatsapp-fixo" href="https://wa.me/5553984621020" target="_blank">
         💬
     </a>
+
+    <!-- CARRINHO LATERAL -->
+    <div id="carrinho" class="carrinho-lateral">
+
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button onclick="fecharCarrinho()">✖</button>
+        </div>
+
+        <div id="lista-carrinho"></div>
+
+        <div class="carrinho-total">
+            <strong>Total: R$ <span id="total">0.00</span></strong>
+        </div>
+
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-
-        const swiper = new Swiper(".meuSwiper", {
-
-            loop: true,
-
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-
-        });
-
-    </script>
-
-    <script>
-
-        const imagens = document.querySelectorAll(".lightbox-img");
-
-        const lightbox = document.getElementById("lightbox");
-
-        const imagemLightbox =
-            document.getElementById("imagem-lightbox");
-
-        const fechar =
-            document.getElementById("fechar-lightbox");
-
-        imagens.forEach((img) => {
-
-            img.addEventListener("click", () => {
-
-                imagemLightbox.src = img.src;
-
-                lightbox.style.display = "flex";
-
-            });
-
-        });
-
-        fechar.addEventListener("click", () => {
-
-            lightbox.style.display = "none";
-
-        });
-
-        lightbox.addEventListener("click", (e) => {
-
-            if (e.target === lightbox) {
-
-                lightbox.style.display = "none";
-
-            }
-
-        });
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

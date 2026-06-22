@@ -13,19 +13,57 @@
 
 <body>
 
-    <!-- HERO -->
+    <header class="topbar">
 
-    <section class="hero">
+        <div>💖 Feito com amor</div>
 
-        <img src="../imagens/logo.png" alt="Ponto e Som Ateliê" class="logo">
+        <div>📦 Enviamos para todo Brasil</div>
 
-        <h1>🧸 Amigurumi</h1>
+        <div>💬 Atendimento via WhatsApp</div>
 
-        <p>
-            Peças artesanais feitas à mão com carinho e personalização.
-        </p>
+    </header>
 
-    </section>
+    <nav class="navbar">
+
+        <!-- ESQUERDA -->
+        <div class="nav-left">
+            <img src="imagens/logo-bastidor.png" alt="Ponto e Som Atelier" class="logo-nav">
+
+            <div class="marca-texto">
+                <span class="marca-nome">Ponto e Som</span>
+                <span class="marca-atelier">Atelier</span>
+            </div>
+        </div>
+
+        <!-- CENTRO -->
+        <ul class="nav-center">
+            <li><a href="#">Início</a></li>
+            <li><a href="#categorias">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <!-- DIREITA -->
+        <div class="nav-right">
+
+            <div class="search-box">
+
+                <button class="search-btn" type="button">
+                    <img src="imagens/icones/lupa.png" alt="Buscar">
+                </button>
+
+                <input type="text" placeholder="Buscar produtos..." class="search-input">
+
+            </div>
+
+            <a href="#" class="icon">
+                <a href="#" class="icon carrinho" onclick="abrirCarrinho()">
+                    <img src="imagens/icones/sacola.png" alt="Carrinho">
+                </a>
+            </a>
+
+        </div>
+
+    </nav>
 
     <!-- BREADCRUMB -->
 
@@ -51,7 +89,7 @@
 
         <div class="grid-galeria">
 
-            <img src="../imagens/amigurumi1.png" alt="Amigurumi 1" class="lightbox-img">
+            <img src="../imagens/amigurumi/amigurumi1.png" alt="Amigurumi 1" class="lightbox-img">
 
         </div>
 
@@ -65,61 +103,28 @@
 
         <div class="grid-produtos">
 
-            <div class="card">
-                <p class="prazo">⏳ Produção sob encomenda</p>
-                <p class="personalizacao">🎨 Cores personalizáveis</p>
+            <div class="card produto">
 
-                <img src="../imagens/amigurumi-gato.png" alt="Gatinho Amigurumi">
-
-                <div class="card-content">
-
-                    <h3>Gatinho Amigurumi</h3>
-
-                    <p>
-                        Feito à mão.
-                        Personalização de cores disponível.
-                    </p>
-
-                    <span class="preco">
-                        Sob Consulta
-                    </span>
-
-                    <a class="btn-encomendar"
-                        href="https://wa.me/5553984621020?text=Olá! Tenho interesse no modelo Gatinho Amigurumi. Gostaria de receber mais informações."
-                        target="_blank">
-
-                        💬 Encomendar este modelo
-
-                    </a>
-
+                <div class="card-badges">
+                    <span class="carrinho-badge">0</span>
                 </div>
 
-            </div>
-
-            <div class="card">
-
-                <img src="../imagens/amigurumi-urso.jpg" alt="Urso Amigurumi">
+                <div class="card-imagem">
+                    <img src="../imagens/amigurumi-urso.jpg" alt="Foto do Produto">
+                </div>
 
                 <div class="card-content">
-
-                    <h3>Urso Amigurumi</h3>
+                    <h3>Nome do Produto</h3>
 
                     <p>
-                        Ótima opção para decoração e presente.
+                        Descrição curta do produto.
                     </p>
 
-                    <span class="preco">
-                        Sob Consulta
-                    </span>
+                    <span class="preco">Sob Consulta</span>
 
-                    <a class="btn-encomendar"
-                        href="https://wa.me/5553984621020?text=Olá! Tenho interesse no modelo Ursinho Amigurumi. Gostaria de receber mais informações."
-                        target="_blank">
-
-                        💬 Encomendar este modelo
-
-                    </a>
-
+                    <button class="btn-carrinho" onclick="adicionarCarrinho('Urso Amigurumi', 1)">
+                        🛒 Adicionar ao carrinho
+                    </button>
                 </div>
 
             </div>
@@ -186,156 +191,8 @@
 
     </div>
 
-    <script>
-
-        const imagens = document.querySelectorAll(".lightbox-img");
-        const lightbox = document.getElementById("lightbox");
-        const imagemLightbox = document.getElementById("imagem-lightbox");
-        const fechar = document.getElementById("fechar-lightbox");
-
-        imagens.forEach((img) => {
-
-            img.addEventListener("click", () => {
-
-                imagemLightbox.src = img.src;
-                lightbox.style.display = "flex";
-
-            });
-
-        });
-
-        fechar.addEventListener("click", () => {
-
-            lightbox.style.display = "none";
-
-        });
-
-        lightbox.addEventListener("click", (e) => {
-
-            if (e.target === lightbox) {
-                lightbox.style.display = "none";
-            }
-
-        });
-
-    </script>
-
-    <script>
-
-        document.addEventListener("DOMContentLoaded", () => {
-
-            const imagens =
-                document.querySelectorAll(".lightbox-img");
-
-            const lightbox =
-                document.getElementById("lightbox");
-
-            const imagemLightbox =
-                document.getElementById("imagem-lightbox");
-
-            const fechar =
-                document.getElementById("fechar-lightbox");
-
-            const anterior =
-                document.getElementById("anterior");
-
-            const proximo =
-                document.getElementById("proximo");
-
-            let indiceAtual = 0;
-
-            function abrirImagem(indice) {
-
-                indiceAtual = indice;
-
-                imagemLightbox.src =
-                    imagens[indiceAtual].src;
-
-                lightbox.style.display = "flex";
-            }
-
-            imagens.forEach((img, indice) => {
-
-                img.addEventListener("click", () => {
-
-                    abrirImagem(indice);
-
-                });
-
-            });
-
-            proximo.addEventListener("click", () => {
-
-                indiceAtual++;
-
-                if (indiceAtual >= imagens.length) {
-
-                    indiceAtual = 0;
-
-                }
-
-                abrirImagem(indiceAtual);
-
-            });
-
-            anterior.addEventListener("click", () => {
-
-                indiceAtual--;
-
-                if (indiceAtual < 0) {
-
-                    indiceAtual =
-                        imagens.length - 1;
-
-                }
-
-                abrirImagem(indiceAtual);
-
-            });
-
-            fechar.addEventListener("click", () => {
-
-                lightbox.style.display = "none";
-
-            });
-
-            lightbox.addEventListener("click", (e) => {
-
-                if (e.target === lightbox) {
-
-                    lightbox.style.display = "none";
-
-                }
-
-            });
-
-            document.addEventListener("keydown", (e) => {
-
-                if (lightbox.style.display !== "flex") return;
-
-                if (e.key === "ArrowRight") {
-
-                    proximo.click();
-
-                }
-
-                if (e.key === "ArrowLeft") {
-
-                    anterior.click();
-
-                }
-
-                if (e.key === "Escape") {
-
-                    lightbox.style.display = "none";
-
-                }
-
-            });
-
-        });
-
-    </script>
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 
